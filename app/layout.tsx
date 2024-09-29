@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
+import { getLoggedInUser } from "@/lib/action/user.actions";
+import { redirect } from "next/navigation";
 
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
@@ -20,11 +22,12 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+
   return (
     <html lang="en">
       <body
