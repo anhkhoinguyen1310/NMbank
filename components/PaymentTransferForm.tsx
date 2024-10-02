@@ -6,13 +6,7 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
-
-import { createTransfer } from "@/lib/actions/dwolla.actions";
-import { createTransaction } from "@/lib/actions/transaction.actions";
-import { getBank, getBankByAccountId } from "@/lib/actions/user.actions";
 import { decryptId } from "@/lib/utils";
-
-import { BankDropdown } from "./bank/BankDropdown";
 import { Button } from "./ui/button";
 import {
     Form,
@@ -25,6 +19,10 @@ import {
 } from "./ui/form";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
+import { BankDropdown } from "./BankDropDown";
+import { getBank, getBankByAccountId } from "@/lib/action/user.actions";
+import { createTransaction } from "@/lib/action/transaction.actions";
+import { createTransfer } from "@/lib/action/dwolla.actions";
 
 const formSchema = z.object({
     email: z.string().email("Invalid email address"),
