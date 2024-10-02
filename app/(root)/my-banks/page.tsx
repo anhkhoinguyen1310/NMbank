@@ -4,7 +4,10 @@ import { getAccounts } from '@/lib/action/bank.actions';
 import { getLoggedInUser } from '@/lib/action/user.actions';
 import React from 'react'
 
+export const dynamic = 'force-dynamic';
+
 const myBank = async () => {
+
     const loggedIn = await getLoggedInUser();
     const accounts = await getAccounts({
         userId: loggedIn.$id
