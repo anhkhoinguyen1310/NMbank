@@ -1,9 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
-import { getLoggedInUser } from "@/lib/action/user.actions";
-import { redirect } from "next/navigation";
-
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 

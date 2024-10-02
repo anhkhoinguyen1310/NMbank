@@ -1,4 +1,4 @@
-import BankCard from '@/components/BankCard';
+
 import HeaderBox from '@/components/HeaderBox'
 import RecentTransaction from '@/components/RecentTransaction';
 import RightSideBar from '@/components/RightSideBar';

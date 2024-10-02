@@ -1,8 +1,6 @@
 import React from 'react'
 import {
-    Form,
     FormControl,
-    FormDescription,
     FormField,
     FormItem,
     FormLabel,
@@ -23,7 +21,7 @@ const formSchema = z.object({
 const CustomTransferForm = () => {
     return (
         <FormField
-            control={form.control}
+            control={formSchema}
             name="sharableId"
             render={({ field }) => (
                 <FormItem className="border-t border-gray-200">
