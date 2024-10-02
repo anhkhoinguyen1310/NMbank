@@ -154,7 +154,7 @@ export const getTransactions = async ({
     accessToken,
 }: getTransactionsProps) => {
     let hasMore = true;
-    let transactions: any = [];
+    let transactions: any = []; // eslint-disable-line @typescript-eslint/no-explicit-any
 
     try {
         // Iterate through each page of new transaction updates for item
@@ -177,6 +177,7 @@ export const getTransactions = async ({
                 date: transaction.date,
                 image: transaction.logo_url,
             }));
+
 
             hasMore = data.has_more;
         }
