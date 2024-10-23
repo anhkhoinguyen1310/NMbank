@@ -112,7 +112,7 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-## ## <a name="production">🚀 Production</a>  
+## <a name="production">🚀 Production</a>  
 
 [Live Production](https://nmbank.netlify.app/sign-in)
 
