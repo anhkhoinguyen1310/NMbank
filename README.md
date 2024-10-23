@@ -1,36 +1,118 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
+  <h3 align="center">NMbank: Manage Your Bank Account Better</h3>
+</div>
 
-## Getting Started
+## 📋 Table of Contents
 
-First, run the development server:
+1. 🤖 [Introduction](#introduction)
+2. ⚙️ [Tech Stack](#tech-stack)
+3. 🔋 [Features](#features)
+4. 🤸 [Quick Start](#quick-start)
+5. 🚨 [Production](#production)
+
+## <a name="introduction"> 🤖 Introduction</a> 
+
+NMbank is a financial SaaS platform that lets you manage your bank accounts effortlessly. Connect multiple bank accounts, view real-time transactions, transfer funds, and manage finances all in one place. Sign-up and easily sign-in with your bank account in Plaid using the credentials:
+
+- **Username**: `user_good`
+- **Password**: `password_good`
+
+
+## <a name="tech-stack"> ⚙️ Tech Stack</a>  
+
+- Next.js
+- TypeScript
+- Appwrite
+- Plaid
+- Dwolla
+- React Hook Form
+- Zod
+- TailwindCSS
+- Chart.js
+- ShadCN
+
+## <a name="features">🔋 Features</a>  
+
+- **Authentication**: Secure SSR authentication with validations.
+- **Connect Banks**: Link multiple bank accounts with Plaid.
+- **Home Page**: Overview of account balance, transactions, and spending categories.
+- **My Banks**: View all connected banks and their details.
+- **Transaction History**: Paginated transaction history with filtering.
+- **Real-Time Updates**: Changes reflect across all relevant pages.
+- **Funds Transfer**: Transfer money using Dwolla.
+- **Responsiveness**: Adapts to different screen sizes.
+
+... and many more, including code architecture and reusability.
+
+## <a name="features">🤸 Quick Start</a>  
+
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+
+Ensure you have the following installed:
+
+- **Git**
+- **Node.js**
+- **npm (Node Package Manager)**
+
+### Cloning the Repository
+
+```bash
+git clone https://github.com/adrianhajdin/banking.git](https://github.com/anhkhoinguyen1310/NMbank.git
+cd banking
+```
+
+### Installation
+
+Install the project dependencies using npm:
+
+```bash
+npm install
+```
+
+### Set Up Environment Variables
+
+Create a new file named `.env` in the root of your project and add the following content:
+
+```env
+#NEXT
+NEXT_PUBLIC_SITE_URL=
+
+#APPWRITE
+NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+NEXT_PUBLIC_APPWRITE_PROJECT=
+APPWRITE_DATABASE_ID=
+APPWRITE_USER_COLLECTION_ID=
+APPWRITE_BANK_COLLECTION_ID=
+APPWRITE_TRANSACTION_COLLECTION_ID=
+APPWRITE_SECRET=
+
+#PLAID
+PLAID_CLIENT_ID=
+PLAID_SECRET=
+PLAID_ENV=
+PLAID_PRODUCTS=
+PLAID_COUNTRY_CODES=
+
+#DWOLLA
+DWOLLA_KEY=
+DWOLLA_SECRET=
+DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+DWOLLA_ENV=sandbox
+```
+
+Replace the placeholder values with your actual respective account credentials. You can obtain these credentials by signing up on [Appwrite](https://appwrite.io/), [Plaid](https://plaid.com/), and [Dwolla](https://dwolla.com/).
+
+### Running the Project
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser to view the project.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## ## <a name="production">🚀 Production</a>  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+[Live Production](https://nmbank.netlify.app/sign-in)
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
