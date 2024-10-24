@@ -11,6 +11,7 @@ import {
     Form
 } from "@/components/ui/form"
 import CustomFormInput from './CustomFormInput';
+import { toast } from 'react-hot-toast';
 import { authFormSchema } from '@/lib/utils';
 import { Loader2 } from 'lucide-react';
 import { useRouter } from 'next/navigation';
@@ -35,9 +36,9 @@ const AuthForm = ({ type }: { type: string }) => {
 
     // 2. Define a submit handler.
     const onSubmit = async (data: z.infer<typeof formSchema>) => {
-        setIsLoading(true)
+        setIsLoading(true);
         try {
-            // Sign up with AppWrite 
+            // Sign up with AppWrite
             const userData = {
                 firstName: data.firstName!,
                 lastName: data.lastName!,
@@ -49,25 +50,37 @@ const AuthForm = ({ type }: { type: string }) => {
                 ssn: data.ssn!,
                 email: data.email,
                 password: data.password,
-            }
+            };
+
             if (type === 'sign-up') {
                 const newUser = await signUp(userData);
                 setUser(newUser);
+                toast.success('Sign up successful!');
             }
+
             if (type === 'sign-in') {
-                const respone = await signIn({
+                const response = await signIn({
                     email: data.email,
-                    password: data.password
-                })
+                    password: data.password,
+                });
+
+                if (response.error) {
+                    toast.error(response.error);
+                } else {
+                    toast.success('Signed in successfully!');
+                    router.push('/'); // Navigate to home page
+                }
+
 
             }
-            if (respone) router.push('/') // -> get to homePage
         } catch (error) {
             console.log(error);
+            toast.error('An error occurred during the process.');
         } finally {
-            setIsLoading(false)
+            setIsLoading(false);
         }
-    }
+    };
+
 
     return (
         <section className='auth-form'>

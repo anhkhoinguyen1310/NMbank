@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, IBM_Plex_Serif } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "react-hot-toast"
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -15,7 +16,7 @@ export const metadata: Metadata = {
   title: "NMBank",
   description: "NMBank is a modern banking platform for everyone",
   icons: {
-    icon: '/icon/logo.svg'
+    icon: '/favico.ico'
   }
 };
 
@@ -30,6 +31,7 @@ export default async function RootLayout({
       <body
         className={`${inter.variable} ${ibmPlexSerif.variable}`}
       >
+        <Toaster position="bottom-center" />
         {children}
       </body>
     </html>

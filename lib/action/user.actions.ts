@@ -46,9 +46,9 @@ export const signIn = async ({ email, password }: signInProps) => {
         const user = await getUserInfo({ userId: response.userId })
         return parseStringify(user)
 
-    } catch (error) {
+    } catch (error: any) {
         console.error('Error during sign-in:', error);
-        throw error;
+        return { error: error.message || 'An error occurred during sign-in.' };
     }
 }
 
@@ -142,7 +142,7 @@ export const createLinkToken = async (user: User) => {
             //.name is the session user not the database name
             //
             client_name: `${user.firstName} ${user.lastName}`,
-            products: ['auth'] as Products[],
+            products: ['auth', 'transactions'] as Products[],
             language: 'en',
             country_codes: ['US'] as CountryCode[],
         }
@@ -187,7 +187,7 @@ export const createBankAccount = async ({
                 shareableId,
             }
         )
-        console.log("Bank account created:", bankAccount);
+
         return parseStringify(bankAccount)
     } catch (error) {
         console.log("Create in bank acocunt:", error);

@@ -1,3 +1,5 @@
+"use client";
+
 import { createLinkToken, exchangePublicToken } from '@/lib/action/user.actions'
 import React, { useCallback, useEffect, useState } from 'react'
 import { Button } from './ui/button'
