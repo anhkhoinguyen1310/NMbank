@@ -59,9 +59,9 @@ const AuthForm = ({ type }: { type: string }) => {
                     email: data.email,
                     password: data.password
                 })
-                if (respone) router.push('/') // -> get to homePage
 
             }
+            if (respone) router.push('/') // -> get to homePage
         } catch (error) {
             console.log(error);
         } finally {
