@@ -1,4 +1,5 @@
 <div align="center">
+<img src="https://github.com/anhkhoinguyen1310/NMbank/blob/main/MN-BankPic/Connect2Cards.png?raw=true"alt="Threads App Screenshot" width="600"/>
   <h3 align="center">NMbank: Manage Your Bank Account Better</h3>
 </div>
 
@@ -9,6 +10,7 @@
 3. 🔋 [Features](#features)
 4. 🤸 [Quick Start](#quick-start)
 5. 🚀  [Production](#production)
+6. 🤖 [Sneak Pics](#sneak-peak)
 
 ## <a name="introduction"> 🤖 Introduction</a> 
 
@@ -59,7 +61,7 @@ Ensure you have the following installed:
 ### Cloning the Repository
 
 ```bash
-git clone https://github.com/adrianhajdin/banking.git](https://github.com/anhkhoinguyen1310/NMbank.git
+git clone https://github.com/anhkhoinguyen1310/NMbank.git
 cd banking
 ```
 
@@ -116,3 +118,12 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 [Live Production](https://nmbank.netlify.app/sign-in)
 
+
+## <a name="sneak-peak"> 🤖 Sneak Pics</a> 
+
+<div style="display: flex; overflow-x: auto;">
+  <img src="https://github.com/anhkhoinguyen1310/NMbank/blob/main/MN-BankPic/dashboardPhoneView.png?raw=true" alt="Profile Page" width="300" style="margin-right: 10px;">
+  <img src="https://github.com/anhkhoinguyen1310/NMbank/blob/main/MN-BankPic/cardPhoneView.png?raw=true" alt="Community Page" width="300" style="margin-right: 10px;">
+  <img src="https://github.com/anhkhoinguyen1310/NMbank/blob/main/MN-BankPic/linkPaildPic.png?raw=true" alt="Responsive Design" width="300" style="margin-right: 10px;">
+  <img src="https://github.com/anhkhoinguyen1310/NMbank/blob/main/MN-BankPic/transferPhoneview.png?raw=true" alt="Search Page" width="300" style="margin-right: 10px;">
+</div>
